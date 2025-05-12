@@ -1,0 +1,18 @@
+{
+  "vendas": [
+    {
+      "numero": "556981134127",
+      "valor": 13.5,
+      "senha": "do0irl",
+      "data": "2025-05-12T23:03:41.488Z"
+    }
+  ],
+  "usuarios": [
+    {
+      "numero": "556981134127",
+      "senha": "do0irl",
+      "grupos": []
+    }
+  ],
+  "grupos": []
+}
