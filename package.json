@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git"
+    "url": "git+https://github.com/Kmoods/Bot-Seraphina"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SEU_USUARIO/SEU_REPOSITORIO/issues"
+    "url": "https://github.com/Kmoods/Bot-Seraphina"
   },
-  "homepage": "https://github.com/SEU_USUARIO/SEU_REPOSITORIO#readme",
+  "homepage": "https://github.com/Kmoods/Bot-Seraphina#readme",
   "description": ""
 }
