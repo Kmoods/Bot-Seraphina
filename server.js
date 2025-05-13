@@ -8,7 +8,8 @@ app.use(express.json()); // Necessário para ler JSON do corpo da requisição
 // Configuração do CORS e JSON
 app.use(cors());
 
-app.use(express.static('public'));
+app.use(express.static(__dirname));
+
 
 // Caminho para o arquivo do banco de dados
 const dbPath = path.join(__dirname, 'data', 'banco.json');
@@ -16,7 +17,11 @@ const historicoSemanalPath = path.join(__dirname, 'data', 'historicoSemanal.json
 const pedidosPath = path.join(__dirname, 'data', 'pedidos.json');
 // Banco de dados em memória para os pedidos
 
-let nextPedidoId = 1; // Variável para gerenciar o próximo ID dos pedidos
+// Rota padrão para redirecionar para index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 
 // Rota para obter dados do dashboard (vendas e usuários)
 app.get('/api/dados', (req, res) => {
