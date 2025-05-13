@@ -119,7 +119,7 @@
     <div id="listaPedidos"></div>
 
     <script>
-   fetch('http://localhost:3000/api/pedidos')
+   fetch('https://bot-seraphina.onrender.com/api/pedidos')
   .then(res => res.json())
   .then(data => {
     const lista = document.getElementById('listaPedidos');
@@ -143,7 +143,7 @@
   });
 
 function aceitar(id) {
-  fetch('http://localhost:3000/api/responder', {
+  fetch('https://bot-seraphina.onrender.com/api/responder', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ id })

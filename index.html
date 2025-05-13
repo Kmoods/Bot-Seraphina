@@ -366,7 +366,6 @@
         <div class="menu-top">
           <div class="title" id="app-title">Pixbling</div>
           <div class="profile">
-            <img src="https://i.pravatar.cc/40" alt="avatar" />
             <div class="profile-info">
               <div class="name">Administrador</div>
               <div class="desc">Conta ativa</div>
@@ -522,7 +521,7 @@
     
     async function carregarDashboard() {
       try {
-        const res = await fetch("http://localhost:3000/api/dados");
+        const res = await fetch("https://bot-seraphina.onrender.com/api/dados");
         const data = await res.json();  // Aqui você deve garantir que a resposta é JSON
         atualizarResumo(data);
         renderizarGrafico(data.vendas);
@@ -566,7 +565,7 @@
     
           if (confirm(`Deseja realmente excluir o usuário ${numero}?`)) {
             try {
-              const res =   fetch(`http://localhost:3000/api/dados/${numero}`, {
+              const res =   fetch(`https://bot-seraphina.onrender.com/api/dados/${numero}`, {
                 method: "DELETE",
               });
     
@@ -699,7 +698,7 @@
       }
     
       try {
-        const res =   fetch("http://localhost:3000/api/venda", {
+        const res =   fetch("https://bot-seraphina.onrender.com/api/venda", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ numero, valor }),
@@ -849,7 +848,7 @@
     
         try {
           // Envia os dados para a API
-          const response =   axios.post('http://localhost:3000/api/salvarHistorico', dadosSemana);
+          const response =   axios.post('https://bot-seraphina.onrender.com/api/salvarHistorico', dadosSemana);
           console.log('Histórico semanal salvo com sucesso:', response.data);
         } catch (error) {
           console.error('Erro ao enviar histórico semanal para a API:', error);

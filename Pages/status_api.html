@@ -51,19 +51,19 @@
         message.textContent = 'Carregando dados da API...';
         try {
           // Fetch vendas
-          const vendasRes = await fetch('http://localhost:3000/api/dados');
+          const vendasRes = await fetch('https://bot-seraphina.onrender.com/api/dados');
           const vendasData = vendasRes.ok ? await vendasRes.json() : { error: 'Erro ao buscar /api/dados' };
 
           // Fetch pedidos
-          const pedidosRes = await fetch('http://localhost:3000/api/pedidos');
+          const pedidosRes = await fetch('https://bot-seraphina.onrender.com/api/pedidos');
           const pedidosData = pedidosRes.ok ? await pedidosRes.json() : { error: 'Erro ao buscar /api/pedidos' };
 
           // Fetch respostas
-          const respostasRes = await fetch('http://localhost:3000/api/respostas');
+          const respostasRes = await fetch('https://bot-seraphina.onrender.com/api/respostas');
           const respostasData = respostasRes.ok ? await respostasRes.json() : { error: 'Erro ao buscar /api/respostas' };
  
           // Fetch historicoSemanal
-          const historicoRes = await fetch('http://localhost:3000/api/data/historicoSemanal');
+          const historicoRes = await fetch('https://bot-seraphina.onrender.com/api/data/historicoSemanal');
           const historicoData = historicoRes.ok ? await historicoRes.json() : { error: 'Erro ao buscar histórico semanal' };
 
           const status = {
