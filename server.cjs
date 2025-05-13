@@ -3,6 +3,7 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
+const PORT = process.env.PORT || 3000; // usa a variável de ambiente ou 3000 para desenvolvimento
 app.use(express.json()); // Necessário para ler JSON do corpo da requisição
 // Configuração do CORS e JSON
 app.use(cors());
@@ -257,4 +258,6 @@ app.post('/api/save-file', (req, res) => {
   }
 });
 // Iniciando o servidor na porta 3000
-app.listen(3000, () => console.log('Painel rodando na porta 3000'));
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
